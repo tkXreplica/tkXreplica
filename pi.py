@@ -62,7 +62,7 @@ def write_to_PI(server, df_path, df, string_) :
     AFval = AFValue()
     #piServer = piServers.DefaultPIServer;  #Pending connect by IP
     #print(piServer)
-    timestamp = datetime.datetime.now() + pd.offsets.DateOffset(years = 0)
+    timestamp = datetime.now() + pd.offsets.DateOffset(years = 0)
     #print(timestamp)
     timestamp = timestamp.strftime('%Y-%m-%d %H:%M:%S')#+ pd.offsets.DateOffset(years=543) #relativedelta(years=543)
     #print(timestamp)
@@ -94,6 +94,6 @@ def Validation(df, path_, string_) :
         
     else :
         
-        timestamp = datetime.datetime.now() + pd.offsets.DateOffset(years = 0)
+        timestamp = datetime.now() + pd.offsets.DateOffset(years = 0)
         timestamp = timestamp.strftime('%Y-%m-%d %H:%M')
         print("{}    {}  : ERROR".format(timestamp,string_))
